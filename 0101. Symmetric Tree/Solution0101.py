@@ -16,4 +16,20 @@ class Solution0101:
             return False
         
         return root1.val == root2.val and self.dfs(root1.left, root2.right) and self.dfs(root1.right, root2.left)
-        
+
+class Solution101_iterative:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        if not root:
+            return True
+        stk = [root, root]
+        while stk:
+            r1, r2 = stk.pop(), stk.pop()
+            if (not r1 and not r2):
+                continue
+            if not r1 or not r2 or r1.val != r2.val:
+                return False
+            stk.append(r1.left)
+            stk.append(r2.right)
+            stk.append(r2.left)
+            stk.append(r1.right)
+        return True
