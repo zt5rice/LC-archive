@@ -18,3 +18,10 @@ public:
         return res;
     }
 };
+
+int main() {
+    Solution0926 sol = Solution0926();
+    string s = "00110";
+    int res = sol.minFlipsMonoIncr(s);
+    cout << res << endl;
+}
