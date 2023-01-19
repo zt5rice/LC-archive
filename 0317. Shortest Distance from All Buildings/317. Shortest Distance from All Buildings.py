@@ -47,6 +47,7 @@ BFS. Iterate through each empty land and calculate the sum distance to every bui
 This will have time limit exceed error.
 TC: O(M^2*N^2)
 SC: O(M*N)
+TLE tested on 01/18/2023
 """
 class Solution:
     def shortestDistance(self, grid: List[List[int]]) -> int:
