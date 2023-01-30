@@ -1,6 +1,16 @@
 class Solution1137 {
 public:
     int tribonacci(int n) {
+        vector<long> dp{0,1,1};
+        long cursum = 2;
+        for (int i = 3; i <= n; i++) {
+            int prev = dp[(i-3)%3];
+            dp[i%3] = cursum;
+            cursum = cursum * 2 - prev;
+        }
+        return (int)dp[n%3];
+    }
+    int tribonacci0(int n) {
         deque<int> dq;
         int sum = 0;
         if (n >= 0) {
