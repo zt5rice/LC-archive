@@ -26,7 +26,7 @@ var findAnagrams = function(s, p) {
         }
         smap[s[i]] = (smap[s[i]] || 0) + 1;
         if (i >= plen - 1) {
-            if (equals(pmap, smap)) {
+            if (equals(pmap, smap)) { // !!! pmap, smap sequence matters
                 res.push(i+1-plen);
             }
             // console.log(smap)
