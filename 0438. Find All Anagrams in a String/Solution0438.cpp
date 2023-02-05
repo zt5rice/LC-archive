@@ -23,12 +23,12 @@ public:
         return res;
     }
 
-    bool arrequal(vector<int>& a1, vector<int>& a2) {
-        for (int i = 0; i < 26; i++) {
-            if (a1[i] != a2[i]) {
-                return false;
-            }
-        }
-        return true;
-    }
+    // bool arrequal(vector<int>& a1, vector<int>& a2) {
+    //     for (int i = 0; i < 26; i++) {
+    //         if (a1[i] != a2[i]) {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
 };
