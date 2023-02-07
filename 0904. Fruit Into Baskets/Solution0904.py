@@ -1,3 +1,7 @@
+from collections import defaultdict
+from typing import List
+
+
 class Solution0904:
     def totalFruit(self, fruits: List[int]) -> int:
         # 初始化
